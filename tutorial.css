@@ -1,0 +1,308 @@
+/* RESET + FONT */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER (hero) */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("images/famous-f1-hairpin-turn-in-monaco-picjumbo-com.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+/* NAVIGATION */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 6%;
+  gap: 1rem;
+}
+
+/* Logo */
+.navigation img {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* NAV LINKS */
+.nav {
+  flex: 1;
+  text-align: right;
+}
+
+.nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  position: relative;
+  padding: 8px 13px;
+}
+
+/* link style */
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  padding: 2px 0;
+  font-weight: 700;
+}
+
+/* underline animation */
+.nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgb(28, 42, 74);
+  display: block;
+  margin: 6px auto 0;
+  transition: width 0.28s ease;
+}
+
+.nav ul li:hover::after {
+  width: 100%;
+}
+
+.nav ul li:hover {
+  transform: translateY(-2px);
+}
+
+/* HERO TEXT (centered) */
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92%, 960px);
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* H1 TEXT*/
+.text h1 {
+  font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+  line-height: 1.05;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+/* <p> TEXT */
+.text P {
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  opacity: 0.95;
+}
+
+/* BUTTON */
+.text button {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px 34px;
+  transition: background 0.25s, transform 0.12s;
+}
+
+.text button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+}
+
+.text button:hover {
+  background: rgb(28, 42, 74);
+}
+
+.text button:focus {
+  background-color: transparent;
+}
+
+.course {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.course h2 {
+  font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+}
+
+.course p {
+  color: #777;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 22px;
+  padding: 10px;
+}
+
+.course-tab {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-menu {
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 10px;
+  flex-basis: 31%;
+  transition: 0.4s box-shadow ease-in-out;
+}
+
+.course-menu h3 {
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.course-menu p {
+  color: #777;
+  font-size: 0.95rem;
+  line-height: 22px;
+}
+
+.course-menu:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.campus {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.campus p {
+  color: #777;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 22px;
+  padding: 10px;
+}
+
+.campus-tab {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.campus-menu {
+  flex-basis: 32%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5%;
+}
+
+.campus-menu img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: 0.5 ease-in-out;
+}
+
+.layer:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.layer h3 {
+  color: black;
+  font-size: 1.5rem;
+  width: 100%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+/* facilities */
+.facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.facilities p {
+  color: #777;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 22px;
+  padding: 10px;
+}
+
+.facilities-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.facilities-tab {
+  flex-basis: 32%;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.facilities-tab img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.facilities-tab p {
+  padding: 0 10px 10px 10px;
+  color: #777;
+  font-size: 0.95rem;
+  line-height: 22px;
+  margin-top: 10px;
+}
+
+.facilities-tab h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
